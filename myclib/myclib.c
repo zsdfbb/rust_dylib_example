@@ -2,6 +2,7 @@
 #include "myclib.h"
 
 int c_add(int a, int b) {
+    printf("[myclib] c_add called\n");
     return a + b;
 }
 

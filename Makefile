@@ -1,4 +1,4 @@
-all: clib lib elf
+all: clib lib rclib elf
 
 lib:
 	make -C ./mylib
@@ -8,6 +8,9 @@ elf:
 
 clib:
 	make -C ./myclib
+
+rclib:
+	make -C ./myrclib
 
 clean:
 	make -C ./mylib clean
