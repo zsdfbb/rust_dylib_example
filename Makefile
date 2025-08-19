@@ -22,5 +22,5 @@ run:
 	make -C ./myelf run
 
 
-info_link:
+link_info:
 	readelf -d myelf/target/release/myelf

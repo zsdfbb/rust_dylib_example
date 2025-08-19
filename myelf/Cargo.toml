@@ -6,3 +6,4 @@ edition = "2024"
 
 [dependencies]
 mylib = { path = "../mylib" }
+procfs = "0.17.0"

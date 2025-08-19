@@ -12,13 +12,17 @@ Rust dynamic library test
 
 ## Run
 
+
+Please build and run in linux.
+
 ```bash
+make build
 make run
 ```
 
 ## Question
 
-### Q1: libstd-8df6be531efb3fd0.so is not libmylib.so
+### Q1: libstd-8df6be531efb3fd0.so is a strange name
 
 ```text
 $ make info_link
@@ -30,3 +34,7 @@ Dynamic section at offset 0x2db8 contains 26 entries:
  0x0000000000000001 (NEEDED)             Shared library: [libstd-8df6be531efb3fd0.so]
  0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]
  ```
+
+### Q2: Process map
+
+

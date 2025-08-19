@@ -8,7 +8,8 @@ clean:
 	cargo clean
 
 run:
-	export LD_LIBRARY_PATH=$(PWD)/myclib:${LD_LIBRARY_PATH}
+	@ echo "CUR_DIR: $(PWD)"
+	export LD_LIBRARY_PATH=$(PWD)/myclib:$(PWD)/myrclib/target/release/deps :${LD_LIBRARY_PATH}
 	cargo run --release
 
 tree:

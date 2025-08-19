@@ -1,4 +1,18 @@
+
 use std::{os::raw::{c_int, c_longlong}};
+
+use procfs::process::Process;
+
+fn read_process_maps() -> procfs::ProcResult<()> {
+    let me = Process::myself()?;
+    let maps = me.maps()?;
+    
+    for map in maps {
+        println!("{:?}", map);
+    }
+    
+    Ok(())
+}
 
 // From clib
 unsafe extern "C" {
@@ -26,4 +40,6 @@ fn main() {
     // test rust c-abi dylib
     let sum = unsafe { rc_add(3, 4) };
     println!("res: {}", sum);
+
+    read_process_maps();
 }
